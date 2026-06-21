@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ben 10 Lore Hub</title>
 
 <style>
@@ -11,7 +12,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
@@ -20,48 +21,76 @@ color:white;
 overflow-x:hidden;
 }
 
+a{
+text-decoration:none;
+color:white;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
 header{
-background:#07101d;
-border-bottom:3px solid #19ff4f;
-padding:15px 40px;
+background:#07132b;
+border-bottom:3px solid #22ff55;
+padding:20px;
+}
+
+.topbar{
+max-width:1400px;
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:999;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
 }
 
 .logo img{
-height:90px;
+height:120px;
+}
+
+.logo-text h1{
+color:#22ff55;
+font-size:42px;
+}
+
+.logo-text p{
+color:#cccccc;
 }
 
 nav{
 display:flex;
-gap:35px;
+gap:30px;
+flex-wrap:wrap;
 }
 
 nav a{
-text-decoration:none;
-color:white;
-font-weight:600;
-transition:.3s;
+font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#19ff4f;
+color:#22ff55;
 }
 
 .hero{
-height:85vh;
+height:700px;
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.75)),
-url('Cover Photo.png');
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("Cover Photo.png");
 background-size:cover;
 background-position:center;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
 padding:20px;
 }
@@ -70,71 +99,68 @@ padding:20px;
 max-width:900px;
 }
 
-.hero-content h1{
-font-size:72px;
-font-weight:800;
+.hero h2{
+font-size:clamp(40px,7vw,90px);
 line-height:1.1;
+margin-bottom:20px;
 }
 
-.hero-content h1 span{
-color:#19ff4f;
+.green{
+color:#22ff55;
 }
 
-.hero-content p{
+.hero p{
 font-size:24px;
-line-height:1.6;
-margin-top:20px;
 color:#ddd;
+margin-bottom:30px;
 }
 
 .search-box{
-margin-top:35px;
-}
-
-.search-box input{
-width:700px;
-max-width:90%;
-padding:18px 25px;
+width:100%;
+max-width:700px;
+padding:18px;
+font-size:20px;
 border-radius:50px;
-border:2px solid #19ff4f;
-background:#101010;
+border:2px solid #22ff55;
+background:#111;
 color:white;
-font-size:18px;
 outline:none;
 }
 
 .section{
-padding:70px 50px;
+max-width:1400px;
+margin:auto;
+padding:60px 20px;
 }
 
 .section-title{
-font-size:40px;
-color:#19ff4f;
+font-size:36px;
+color:#22ff55;
 margin-bottom:30px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+gap:20px;
 }
 
 .card{
-background:#0d0d0d;
-border:1px solid #19ff4f;
+background:#111;
+border:1px solid #22ff55;
 border-radius:15px;
 overflow:hidden;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 20px #19ff4f;
+transform:translateY(-5px);
+box-shadow:0 0 20px #22ff55;
 }
 
 .card img{
 width:100%;
-height:260px;
+height:250px;
 object-fit:cover;
 }
 
@@ -145,154 +171,85 @@ padding:15px;
 .card-content h3{
 margin-bottom:10px;
 }
-  .stats-grid{
+
+.stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
 }
 
 .stat-box{
-background:#0d0d0d;
-border:1px solid #19ff4f;
+background:#111;
+border:1px solid #22ff55;
 padding:30px;
-border-radius:15px;
 text-align:center;
+border-radius:15px;
 }
 
 .stat-box h2{
-font-size:42px;
-color:#19ff4f;
-margin-bottom:10px;
-}
-
-.didyouknow{
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:25px;
-}
-
-.fact-box{
-background:#0d0d0d;
-border:1px solid #19ff4f;
-border-radius:15px;
-padding:30px;
-}
-
-.fact-box h3{
-color:#19ff4f;
-margin-bottom:15px;
-font-size:28px;
-}
-
-.fact-box p{
-line-height:1.8;
-color:#ddd;
-}
-
-.article-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.article{
-background:#0d0d0d;
-border:1px solid #19ff4f;
-border-radius:15px;
-padding:20px;
-transition:.3s;
-}
-
-.article:hover{
-box-shadow:0 0 15px #19ff4f;
-}
-
-.article h3{
-color:#19ff4f;
+font-size:40px;
+color:#22ff55;
 margin-bottom:10px;
 }
 
 footer{
-background:#07101d;
-border-top:2px solid #19ff4f;
-padding:50px;
-margin-top:50px;
+background:#07132b;
+padding:50px 20px;
+margin-top:60px;
+border-top:3px solid #22ff55;
 }
 
 .footer-grid{
+max-width:1400px;
+margin:auto;
 display:grid;
-grid-template-columns:2fr 1fr 1fr 1fr;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
-.footer-logo img{
-height:80px;
+.footer-grid h3{
+color:#22ff55;
 margin-bottom:15px;
 }
 
-.footer-title{
-color:#19ff4f;
-margin-bottom:15px;
-font-size:22px;
-}
-
-.footer-links a{
-display:block;
-color:white;
-text-decoration:none;
+.footer-grid p{
 margin-bottom:10px;
-}
-
-.footer-links a:hover{
-color:#19ff4f;
-}
-
-.copyright{
-text-align:center;
-margin-top:40px;
-color:#aaa;
+color:#ccc;
 }
 
 @media(max-width:768px){
 
-header{
+.logo{
 flex-direction:column;
-gap:20px;
-padding:20px;
+text-align:center;
 }
 
 .logo img{
-height:70px;
+height:90px;
+}
+
+.logo-text h1{
+font-size:30px;
 }
 
 nav{
-flex-wrap:wrap;
 justify-content:center;
-gap:20px;
 }
 
 .hero{
-height:70vh;
+height:600px;
 }
 
-.hero-content h1{
-font-size:42px;
+.hero h2{
+font-size:50px;
 }
 
-.hero-content p{
+.hero p{
 font-size:18px;
 }
 
-.section{
-padding:50px 20px;
-}
-
-.didyouknow{
-grid-template-columns:1fr;
-}
-
-.footer-grid{
-grid-template-columns:1fr;
+.search-box{
+font-size:16px;
 }
 
 }
@@ -300,12 +257,19 @@ grid-template-columns:1fr;
 </style>
 </head>
 
-<body>
+<body><header>
 
-<header>
+<div class="topbar">
 
 <div class="logo">
-<img src="Ben 10 Lore Hub Logo.png" alt="Logo">
+
+<img src="Ben 10 Lore Hub Logo.png" alt="Ben 10 Lore Hub">
+
+<div class="logo-text">
+<h1>Ben 10 Lore Hub</h1>
+<p>The Ultimate Ben 10 Database</p>
+</div>
+
 </div>
 
 <nav>
@@ -317,23 +281,30 @@ grid-template-columns:1fr;
 <a href="#">Wiki</a>
 </nav>
 
+</div>
+
 </header>
 
 <section class="hero">
 
 <div class="hero-content">
 
-<h1>The Ultimate <span>Ben 10</span> Database</h1>
+<h2>
+The Ultimate
+<span class="green">Ben 10</span>
+Database
+</h2>
 
 <p>
-Explore aliens, villains, episodes,
-Omnitrix secrets, transformations,
-lore and everything from the Ben 10 Universe.
+Explore aliens, villains, episodes, Omnitrix secrets,
+transformations and everything from the Ben 10 Universe.
 </p>
 
-<div class="search-box">
-<input type="text" placeholder="Search the Ben 10 Universe...">
-</div>
+<input
+type="text"
+class="search-box"
+placeholder="Search the Ben 10 Universe..."
+>
 
 </div>
 
@@ -346,50 +317,50 @@ lore and everything from the Ben 10 Universe.
 <div class="cards">
 
 <div class="card">
-<img src="https://placehold.co/400x500/111111/22ff55?text=Heatblast">
+<img src="https://placehold.co/400x250/111111/22ff55?text=Heatblast">
 <div class="card-content">
 <h3>Heatblast</h3>
-<p>Pyronite from Pyros with powerful fire abilities.</p>
+<p>Pyronite • Master of Fire</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/400x500/111111/22ff55?text=XLR8">
+<img src="https://placehold.co/400x250/111111/22ff55?text=XLR8">
 <div class="card-content">
 <h3>XLR8</h3>
-<p>One of the fastest aliens in the Omnitrix.</p>
+<p>Kineceleran • Super Speed</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/400x500/111111/22ff55?text=Four+Arms">
+<img src="https://placehold.co/400x250/111111/22ff55?text=Four+Arms">
 <div class="card-content">
 <h3>Four Arms</h3>
-<p>Tetramand warrior with incredible strength.</p>
+<p>Tetramand • Super Strength</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/400x500/111111/22ff55?text=Diamondhead">
+<img src="https://placehold.co/400x250/111111/22ff55?text=Diamondhead">
 <div class="card-content">
 <h3>Diamondhead</h3>
-<p>Crystal-based Petrosapien alien.</p>
+<p>Petrosapien • Crystal Warrior</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/400x500/111111/22ff55?text=Upgrade">
+<img src="https://placehold.co/400x250/111111/22ff55?text=Upgrade">
 <div class="card-content">
 <h3>Upgrade</h3>
-<p>Galvanic Mechamorph technology master.</p>
+<p>Galvanic Mechamorph</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/400x500/111111/22ff55?text=Ghostfreak">
+<img src="https://placehold.co/400x250/111111/22ff55?text=Ghostfreak">
 <div class="card-content">
 <h3>Ghostfreak</h3>
-<p>Mysterious Ectonurite ghost alien.</p>
+<p>Ectonurite • Phantom Alien</p>
 </div>
 </div>
 
@@ -397,13 +368,13 @@ lore and everything from the Ben 10 Universe.
 
 </section>
 
-<!-- STATISTICS -->
+<!-- UNIVERSE STATISTICS -->
 
 <section class="section">
 
 <h2 class="section-title">Universe Statistics</h2>
 
-<div class="stats-grid">
+<div class="stats">
 
 <div class="stat-box">
 <h2>60+</h2>
@@ -432,34 +403,6 @@ lore and everything from the Ben 10 Universe.
 
 </div>
 
-</section>
-
-<!-- DID YOU KNOW -->
-
-<section class="section">
-
-<h2 class="section-title">Did You Know?</h2>
-
-<div class="didyouknow">
-
-<div class="fact-box">
-<h3>Omnitrix Fact</h3>
-<p>
-The Omnitrix was created by Azmuth and is considered
-one of the most powerful devices in the universe.
-</p>
-</div>
-
-<div class="fact-box">
-<h3>Heatblast</h3>
-<p>
-Heatblast was Ben's first transformation
-in the original Ben 10 series.
-</p>
-</div>
-
-</div>
-
 </section><!-- LATEST ARTICLES -->
 
 <section class="section">
@@ -469,34 +412,30 @@ in the original Ben 10 series.
 <div class="cards">
 
 <div class="card">
-<img src="https://placehold.co/400x250/111111/22ff55?text=Heatblast">
 <div class="card-content">
 <h3>Heatblast</h3>
-<p>The Pyronite alien with control over fire.</p>
+<p>The complete history of Ben's first alien transformation.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/400x250/111111/22ff55?text=Vilgax">
 <div class="card-content">
 <h3>Vilgax</h3>
-<p>The greatest enemy of Ben Tennyson.</p>
+<p>Explore the story of Ben Tennyson's greatest enemy.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/400x250/111111/22ff55?text=Omnitrix">
 <div class="card-content">
 <h3>The Omnitrix</h3>
-<p>The most powerful device in the universe.</p>
+<p>Everything you need to know about the Omnitrix.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/400x250/111111/22ff55?text=Alien+X">
 <div class="card-content">
 <h3>Alien X</h3>
-<p>The ultimate Celestialsapien transformation.</p>
+<p>The most powerful transformation in the Ben 10 Universe.</p>
 </div>
 </div>
 
@@ -504,54 +443,83 @@ in the original Ben 10 series.
 
 </section>
 
-<!-- FOOTER -->
+<!-- DID YOU KNOW -->
+
+<section class="section">
+
+<h2 class="section-title">Did You Know?</h2>
+
+<div class="stat-box">
+
+<h2>🔥</h2>
+
+<p style="font-size:20px;">
+Heatblast was Ben's first alien transformation
+in the original Ben 10 series.
+</p>
+
+</div>
+
+</section>
 
 <footer>
 
 <div class="footer-grid">
 
 <div>
-<img src="Ben 10 Lore Hub Logo.png" style="height:80px;">
-<p style="margin-top:15px;">
+
+<img src="Ben 10 Lore Hub Logo.png" style="height:80px; margin-bottom:15px;">
+
+<p>
 Ben 10 Lore Hub is an independent fan-made database
 dedicated to everything in the Ben 10 Universe.
 </p>
+
 </div>
 
 <div>
+
 <h3>Explore</h3>
+
 <p>Aliens</p>
 <p>Villains</p>
 <p>Episodes</p>
 <p>Omnitrix</p>
 <p>Wiki</p>
+
 </div>
 
 <div>
+
 <h3>Community</h3>
+
 <p>About Us</p>
 <p>Contact</p>
 <p>Contribute</p>
 <p>Privacy Policy</p>
+
 </div>
 
 <div>
+
 <h3>Follow Us</h3>
+
 <p>YouTube</p>
-<p>Instagram</p>
 <p>Facebook</p>
+<p>Instagram</p>
 <p>X / Twitter</p>
-</div>
 
 </div>
 
-<div style="text-align:center;margin-top:40px;">
-© 2026 Ben 10 Lore Hub. All Rights Reserved.
+</div>
+
+<div style="text-align:center; margin-top:40px; color:#aaa;">
+
+© 2026 Ben 10 Lore Hub • Fan Made Wiki Project
+
 </div>
 
 </footer>
 
 </body>
 </html>
-
-  
