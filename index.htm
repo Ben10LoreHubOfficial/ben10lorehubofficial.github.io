@@ -1,21 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ben 10 Lore Hub</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+}
+
+header{
+background:linear-gradient(90deg,#00ff66,#006622);
+padding:20px;
+text-align:center;
+box-shadow:0 0 20px #00ff66;
+}
+
+header h1{
+font-size:3rem;
+color:black;
+}
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200') center/cover;
+}
+
+.hero h2{
+font-size:3rem;
+margin-bottom:20px;
+text-shadow:0 0 10px black;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+}
+
+.section{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section h2{
+color:#00ff66;
+margin-bottom:30px;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:20px;
+border:1px solid #00ff66;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 15px #00ff66;
+}
+
+footer{
+background:#111;
+padding:20px;
+text-align:center;
+margin-top:40px;
+border-top:2px solid #00ff66;
+}
+</style>
 </head>
+
 <body>
 
+<header>
 <h1>Ben 10 Lore Hub</h1>
+<p>The Ultimate Ben 10 Database</p>
+</header>
 
-<p>Welcome to the Ultimate Ben 10 Database!</p>
+<section class="hero">
+<h2>Welcome Ben 10 Fans!</h2>
+<p>
+Explore aliens, villains, episodes, Omnitrix facts and everything from the Ben 10 Universe.
+</p>
+</section>
 
+<section class="section">
+<h2>Featured Aliens</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Heatblast</h3>
+<p>Ben's first alien with powerful fire abilities.</p>
+</div>
+
+<div class="card">
+<h3>XLR8</h3>
+<p>One of the fastest aliens in the Omnitrix.</p>
+</div>
+
+<div class="card">
+<h3>Diamondhead</h3>
+<p>Creates powerful crystal weapons and shields.</p>
+</div>
+
+<div class="card">
+<h3>Four Arms</h3>
+<p>Super strength and incredible combat power.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
 <h2>Latest Facts</h2>
 
-<ul>
-<li>Heatblast was Ben's first alien.</li>
-<li>Vilgax is Ben's greatest enemy.</li>
-<li>Omnitrix contains DNA of many species.</li>
-</ul>
+<div class="cards">
+
+<div class="card">
+<p>🔥 Heatblast was Ben's first alien transformation.</p>
+</div>
+
+<div class="card">
+<p>👽 Omnitrix contains DNA from many alien species.</p>
+</div>
+
+<div class="card">
+<p>⚔️ Vilgax is Ben's greatest enemy.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Ben 10 Lore Hub | Fan Made Website</p>
+</footer>
 
 </body>
 </html>
